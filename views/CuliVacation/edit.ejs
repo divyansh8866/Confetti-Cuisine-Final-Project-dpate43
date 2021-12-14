@@ -1,0 +1,56 @@
+<div class="data-form">
+  <form class="form-signin" action="<%=`/vacations/${curVacation._id}/update?_method=PUT`%>" method="POST">
+    <h2 class="form-signin-heading">Edit course:</h2>
+    <label for="inputTitle">Title</label>
+    <input type="text" name="title" id="inputTitle" class="form-control" placeholder="Title" required="" value="<%= curVacation.title %>">
+    
+    <label for="id10">Current Cuisine </label>
+    <p><%=curVacation.cuisine%></p>
+    <label for="id1">New Cusine Type</label>
+    <select type="text" name="cuisine" id="id1" class="form-control" required="" >
+      <option>Continental</option>
+      <option>Traditional</option>
+      <option>Haute-cuisine</option>
+      <option>Nouvelle-cuisine</option>
+      <option>Fusion</option>
+      <option>Vegan</option>
+      <option>Vegetarian</option>
+      <option>Asian</option>
+      <option>Indian</option>
+      <option>Middle-Eastern</option>
+      <option>African</option>
+      <option>Central American</option>
+      <option>South American</option>
+      </select>
+    <label for="id1">Description</label>
+    <input type="text" name=  "description" id="id1" class="form-control" placeholder="Description" required="" value="<%= curVacation.description %>">
+    <label for="id2">Vacation 'hero image' filename</label>
+    <input type="text" name="heroImage" id="id2" class="form-control" placeholder="Image here" required="" value="<%= curVacation.heroImage %>">
+    <label for="id3">Max Travelers</label>
+    <input type="number" name="maxTravelers" id="id3" min="0" max="25" class="form-control" placeholder="Max Travelrs" value="<%= curVacation.maxTravelers %>">
+    <label for="id4">Cost</label>
+    <input type="number" name="cost" id="id4" class="form-control" placeholder="In $" value="<%= curVacation.cost %>">
+    <label for="id5">Destination</label>
+    <input type="text" name="destination" id="id5" class="form-control" placeholder="Destination location" required="" value="<%= curVacation.destination %>">
+    
+    <label for="id1">Current Departure Location</label>
+    <p><%=curVacation.departureLocation%></p>
+    
+    <label for="id6"> New Departure Location</label>
+    <select type="text" name="departureLocation" id="id6" class="form-control" placeholder="Destination location" required="" >
+      <option>New York (JFK)</option>
+      <option>Boston (BOS)</option>
+      <option>Chicago (ORD)</option>
+      <option>Miami (MIA)</option>
+      <option>St. Louis (STL)</option>
+      <option>Dallas (DFW)</option>
+      <option>Seattle (SEA)</option>
+      <option>San Francisco (SFO)</option>
+      </select>
+    <label for="id7">Departure Date</label>
+    <input type="date" name="departureDate" id="id7" class="form-control" placeholder="Destination location" required="" value="<%= curVacation.departureDate %>">
+    <label for="id8">Return Date</label>
+    <input type="date" name="returnDate" id="id8" class="form-control" placeholder="Destination location" required="" value="<%= curVacation.returnDate %>">
+    <br /><button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
+  </form>
+</div>

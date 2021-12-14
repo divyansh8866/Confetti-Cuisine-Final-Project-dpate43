@@ -45,6 +45,10 @@ a {
 .container {
   padding: 0% 10%;
 }
+.view_packages{
+  color: #3d41b4;
+  font-size: large;
+}
 
 .button {
   background-color: #ed4a0f;
